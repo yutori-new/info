@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>yutori</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <canvas id="bgCanvas"></canvas>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <audio id="bg-audio" loop src="background.mp3" preload="auto"></audio>
+
+  <div id="start-screen" class="start">
+    <div class="start-content">
+      <div class="loader-circle" id="loader-circle"></div>
+      <p id="status-text">LOADING ASSETS...</p>
+      <div class="enter-hint" id="enter-hint">CLICK TO ENTER</div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="terminal" id="terminal">
+      <div class="term-body">
+        <a href="https://discord.com/users/1474075672526852158" target="_blank" class="tile-profile">
+          <div class="avatar-wrap">
+            <img id="discord-av" src="" alt="avatar">
+            <div id="custom-status-mini"></div>
+          </div>
+          <div class="profile-info">
+            <span class="name" id="discord-name">yutori</span>
+            <span class="handle" id="discord-tag">yutori</span>
+          </div>
+        </a>
+
+        <div class="social-grid">
+          <a href="https://t.me/wiskascg" target="_blank" class="tile-social tg-main">
+            <i class="fa-brands fa-telegram"></i>
+            <span>лс</span>
+          </a>
+          <a href="https://github.com/wiskas-n" target="_blank" class="tile-social gh">
+            <i class="fa-brands fa-github"></i>
+            <span>гитхаб</span>
+          </a>
+          <a href="https://t.me/wiskysia" target="_blank" class="tile-social tg-ch">
+            <i class="fa-brands fa-telegram"></i>
+            <span>тгк</span>
+          </a>
+        </div>
+
+        <a href="https://t.me/wiskysia_projects" target="_blank" class="tile-projects">
+          <i class="fa-solid fa-code-branch"></i>
+          <div class="proj-text">
+            <strong>проекты</strong>
+            <small>посмотри мои последние проекты</small>
+          </div>
+        </a>
+
+        <div id="dynamic-tile"></div>
+
+        <div class="viz-bar" id="vizBar"></div>
+
+      </div>
+
+      <div class="term-footer">
+        <div class="footer-left">audio: <span id="audio-status">OFF</span></div>
+        <button class="vol-btn" id="vol-btn">[ mute ]</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="visualizer.js"></script>
+  <script src="lanyard.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
